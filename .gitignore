@@ -1,0 +1,13 @@
+# Virtual Environments
+.venv
+venv
+myenv
+
+# Models
+/starter-guides/rag/models/*
+
+# Datasets
+/starter-guides/text-search/simplewiki.json
+
+# Other
+/starter-guides/multimodal-search
