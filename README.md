@@ -12,6 +12,7 @@ This directory contains beginner-level tutorials using Marqo. It contains:
 ### `quick-start`
 This directory contains the code that is explained in the Marqo documentation Quick Start guides:
 * `quick_start_api.py`: Marqo API Quick Start 
+* `quick_start_cloud.py`: Marqo Cloud Quick Start 
 
 ### `getting-started`
 This directory contains the code that is explained in the Marqo documentation Getting Started guides:
@@ -20,6 +21,8 @@ This directory contains the code that is explained in the Marqo documentation Ge
 ### `starter-guides`
 This directory contains the code that is explained in the Marqo documentation Starter Guides:
 * `text-search/text_search_api.py`: Marqo API Text Search Demo
+* `image-search/image_search_api.py`: Marqo API Image Search Demo
+* `rag/rag_api.py`: Marqo API Generative Search (RAG) Demo
 
 ## Coming Soon...
 This repository will continue to be updated as new tutorials (written and video) come out. Sign up to our [newsletter](https://marqo.ai/newsletter) to be notified when new tutorials get released! For more examples with Marqo you can visit our [examples folder](https://github.com/marqo-ai/marqo/tree/mainline/examples) or our [Marqo documentation](https://docs.marqo.ai/). 
