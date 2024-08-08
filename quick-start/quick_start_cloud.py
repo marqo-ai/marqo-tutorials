@@ -1,5 +1,5 @@
 #####################################################
-### STEP 1. Setting UP
+### STEP 1. Setting Up
 #####################################################
 
 # 1. Sign Up to Marqo Cloud: https://cloud.marqo.ai/

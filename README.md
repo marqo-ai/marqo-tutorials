@@ -13,6 +13,7 @@ This directory contains beginner-level tutorials using Marqo. It contains:
 This directory contains the code that is explained in the Marqo documentation Quick Start guides:
 * `quick_start_api.py`: Marqo API Quick Start 
 * `quick_start_cloud.py`: Marqo Cloud Quick Start 
+* `quick_start_marqtune.py`: Marqtune Quick Start 
 
 ### `getting-started`
 This directory contains the code that is explained in the Marqo documentation Getting Started guides:
