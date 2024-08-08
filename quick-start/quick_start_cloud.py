@@ -12,7 +12,6 @@ import marqo
 
 # Create a Marqo client
 api_key = "your_api_key"  # replace with your api key (https://www.marqo.ai/blog/finding-my-marqo-api-key)
-api_key = "QWOBTukZ58/lUk84V+Vm0e7LS0aAuZ4jc7iCqEhKidi75M8VaS72DphVRAIlB8Al"
 mq = marqo.Client("https://api.marqo.ai", api_key=api_key)
 
 # Delete the index if it already exists
