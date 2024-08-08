@@ -19,6 +19,7 @@ This directory contains the code that is explained in the Marqo documentation Qu
 This directory contains the code that is explained in the Marqo documentation Getting Started guides:
 * `getting_started_api.py`: Marqo API Getting Started
 * `getting_started_cloud.py`: Marqo Cloud Getting Started
+* `getting_started_marqtune.py`: Marqtune Getting Started
 
 ### `starter-guides`
 This directory contains the code that is explained in the Marqo documentation Starter Guides:
