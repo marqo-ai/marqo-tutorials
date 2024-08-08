@@ -17,5 +17,9 @@ This directory contains the code that is explained in the Marqo documentation Qu
 This directory contains the code that is explained in the Marqo documentation Getting Started guides:
 * `getting_started_api.py`: Marqo API Getting Started
 
+### `starter-guides`
+This directory contains the code that is explained in the Marqo documentation Starter Guides:
+* `text-search/text_search_api.py`: Marqo API Text Search Demo
+
 ## Coming Soon...
 This repository will continue to be updated as new tutorials (written and video) come out. Sign up to our [newsletter](https://marqo.ai/newsletter) to be notified when new tutorials get released! For more examples with Marqo you can visit our [examples folder](https://github.com/marqo-ai/marqo/tree/mainline/examples) or our [Marqo documentation](https://docs.marqo.ai/). 
