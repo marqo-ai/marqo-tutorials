@@ -26,6 +26,7 @@ This directory contains the code that is explained in the Marqo documentation St
 * `image-search/image_search_api.py`: Marqo API Image Search Demo
 * `image-search/image_search_cloud.py`: Marqo Cloud Image Search Demo
 * `rag/rag_api.py`: Marqo API Generative Search (RAG) Demo
+* `rag/rag_cloud.py`: Marqo Cloud Generative Search (RAG) Demo
 
 ## Coming Soon...
 This repository will continue to be updated as new tutorials (written and video) come out. Sign up to our [newsletter](https://marqo.ai/newsletter) to be notified when new tutorials get released! For more examples with Marqo you can visit our [examples folder](https://github.com/marqo-ai/marqo/tree/mainline/examples) or our [Marqo documentation](https://docs.marqo.ai/). 
