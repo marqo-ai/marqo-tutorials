@@ -22,6 +22,7 @@ This directory contains the code that is explained in the Marqo documentation Ge
 ### `starter-guides`
 This directory contains the code that is explained in the Marqo documentation Starter Guides:
 * `text-search/text_search_api.py`: Marqo API Text Search Demo
+* `text-search/text_search_cloud.py`: Marqo Cloud Text Search Demo
 * `image-search/image_search_api.py`: Marqo API Image Search Demo
 * `rag/rag_api.py`: Marqo API Generative Search (RAG) Demo
 
