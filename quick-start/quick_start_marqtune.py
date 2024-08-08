@@ -20,8 +20,9 @@ marqtune_client = Client(
     api_key=api_key
 )
 
-# Specify path to your csv. We will use a small dataset
-input_data_path = "quick-start/marqtune/marqtune_wclip_pairs.csv"
+# Specify path to your csv. We will use a small dataset which you can
+# download from: https://drive.google.com/file/d/12rzhI4DE-x7GVoKC8yRDjmgwA99Zf4zV/view?usp=sharing
+input_data_path = "quick-start/marqtune_wclip_pairs.csv" 
 
 # Specify model name
 model_name = "quick_start_marqtune"
