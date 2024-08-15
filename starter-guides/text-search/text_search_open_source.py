@@ -111,7 +111,7 @@ print(f"creating subset with {len(subset_data)} entries")
 #####################################################
 
 # Name your index
-index_name = 'text-search-api'
+index_name = 'text-search-open-source'
 
 # Set up the Client
 client = Client("http://localhost:8882")
