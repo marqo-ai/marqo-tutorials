@@ -69,7 +69,7 @@ DOCUMENTS = [
 from marqo import Client
 
 # Your index name
-index_name = 'news-index-api'
+index_name = 'news-index-open-source'
 
 # Set up the Client
 client = Client(
