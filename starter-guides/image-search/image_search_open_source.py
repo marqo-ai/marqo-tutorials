@@ -19,7 +19,7 @@ docker run --name marqo -it -p 8882:8882 marqoai/marqo:latest
 client = Client("http://localhost:8882")
 
 # Name your index
-index_name = 'image-search-api'
+index_name = 'image-search-open-source'
 
 # We create the index. Note if it already exists an error will occur
 # as you cannot overwrite an existing index. For this reason, we delete
