@@ -1,3 +1,6 @@
 # Any large files
 starter-guides/text-search/simplewiki.json
-starter-guides/rag/models/*
+starter-guides/rag/models/*.DS_Store
+
+# DS Store
+.DS_Store
