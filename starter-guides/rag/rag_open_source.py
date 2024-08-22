@@ -75,27 +75,27 @@ from marqo import Client
 index_name = 'news-index-open-source'
 
 # Set up Marqo Client
-client = Client(url='http://localhost:8882')
+mq = Client(url='http://localhost:8882')
 
 # We create the index. Note if it already exists an error will occur
 # as you cannot overwrite an existing index. For this reason, we delete
 # any existing index 
 try:
-    client.index(index_name).delete()
+    mq.index(index_name).delete()
 except:
     pass
 
 # Create Marqo index
-client.create_index(index_name)
+mq.create_index(index_name)
 
 # Indexing documents 
-client.index(index_name).add_documents(DOCUMENTS, tensor_fields= ["Title", "Description"])
+mq.index(index_name).add_documents(DOCUMENTS, tensor_fields= ["Title", "Description"])
 
 # Ensure only documents with this date are included
 date = '2024-08-03'
 
 # Peform search on Marqo index with the same question as before
-results = client.index(index_name).search(
+results = mq.index(index_name).search(
     q=question, 
     filter_string=f"date:{date}", 
     limit=5)

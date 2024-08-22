@@ -108,7 +108,7 @@ api_key = "your_api_key"
 index_name = 'text-search-cloud'
 
 # Set up the Client
-client = Client(
+mq = Client(
     "https://api.marqo.ai", 
     api_key=api_key
 )
@@ -117,18 +117,18 @@ client = Client(
 # as you cannot overwrite an existing index. For this reason, we delete
 # any existing index 
 try:
-    client.delete_index(index_name)
+    mq.delete_index(index_name)
 except:
     pass
 
 # Create index
-client.create_index(
+mq.create_index(
     index_name, 
     model='hf/all_datasets_v4_MiniLM-L6'
 )
 
 # Add the subset of data to the index
-responses = client.index(index_name).add_documents(
+responses = mq.index(index_name).add_documents(
     subset_data, 
     client_batch_size=50,
     tensor_fields=["title", "content"]
@@ -145,7 +145,7 @@ responses = client.index(index_name).add_documents(
 query = 'what is air made of?'
 
 # Obtain results for this query from the Marqo index 
-results = client.index(index_name).search(query)
+results = mq.index(index_name).search(query)
 
 # We can check the results - let's look at the top hit
 pprint.pprint(results['hits'][0])
@@ -154,7 +154,7 @@ pprint.pprint(results['hits'][0])
 pprint.pprint(results['hits'][0]['_highlights'])
 
 # We use lexical search instead of tensor search
-results = client.index(index_name).search(query, search_method='LEXICAL')
+results = mq.index(index_name).search(query, search_method='LEXICAL')
 
 # We can check the lexical results - lets look at the top hit
 pprint.pprint(results['hits'][0])
