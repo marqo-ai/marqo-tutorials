@@ -14,7 +14,7 @@ from marqo import Client
 api_key = "your_api_key"
 
 # Set up the Client
-client = Client(
+mq = Client(
     "https://api.marqo.ai", 
     api_key=api_key
 )
@@ -30,15 +30,15 @@ index_name = 'text-search-cloud'
 # as you cannot overwrite an existing index. For this reason, we delete
 # any existing index 
 try:
-    client.delete_index(index_name)
+    mq.delete_index(index_name)
 except:
     pass
 
 # Create the movie index 
-client.create_index(index_name, model="hf/e5-base-v2")
+mq.create_index(index_name, model="hf/e5-base-v2")
 
 # Add documents (movie descriptions) to the index
-client.index(index_name).add_documents(
+mq.index(index_name).add_documents(
     [
         {
             "Title": "Inception",
@@ -65,7 +65,7 @@ client.index(index_name).add_documents(
 #####################################################
 
 # Perform a search query on the index
-results = client.index(index_name).search(
+results = mq.index(index_name).search(
     q="Which movie is about space exploration?"
 )
 

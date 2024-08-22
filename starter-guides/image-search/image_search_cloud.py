@@ -13,7 +13,7 @@ api_key = "your_api_key"
 from marqo import Client
 
 # Set up the Client
-client = Client(
+mq = Client(
     "https://api.marqo.ai", 
     api_key=api_key
 )
@@ -29,7 +29,7 @@ index_name = 'image-search-cloud'
 # as you cannot overwrite an existing index. For this reason, we delete
 # any existing index 
 try:
-    client.index(index_name).delete()
+    mq.index(index_name).delete()
 except:
     pass
 
@@ -40,7 +40,7 @@ settings = {
 }
 
 # Create the index
-client.create_index(index_name, settings_dict=settings)
+mq.create_index(index_name, settings_dict=settings)
 
 # ####################################################
 # ### STEP 4: Add Images to the Index
@@ -55,7 +55,7 @@ documents = [
 ]
 
 # Add these documents to the index
-res = client.index(index_name).add_documents(
+res = mq.index(index_name).add_documents(
     documents,
     client_batch_size=1,
     tensor_fields=["image"]
@@ -74,7 +74,7 @@ pprint(res)
 query = "A rider on a horse jumping over the barrier"
 
 # Perform a search for this query
-search_results = client.index(index_name).search(query)
+search_results = mq.index(index_name).search(query)
 
 # Obtain the top result 
 top_result = search_results['hits'][0]

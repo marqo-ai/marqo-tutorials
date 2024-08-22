@@ -16,7 +16,7 @@ docker run --name marqo -it -p 8882:8882 marqoai/marqo:latest
 ####################################################
 
 # Initialize the Marqo Client
-client = Client("http://localhost:8882")
+mq = Client("http://localhost:8882")
 
 # Name your index
 index_name = 'image-search-open-source'
@@ -25,7 +25,7 @@ index_name = 'image-search-open-source'
 # as you cannot overwrite an existing index. For this reason, we delete
 # any existing index 
 try:
-    client.index(index_name).delete()
+   mq.index(index_name).delete()
 except:
     pass
 
@@ -36,7 +36,7 @@ settings = {
 }
 
 # Create the index
-client.create_index(index_name, settings_dict=settings)
+mq.create_index(index_name, settings_dict=settings)
 
 # ####################################################
 # ### STEP 3: Add Images to the Index
@@ -52,7 +52,7 @@ documents = [
 ]
 
 # Add these documents to the index
-res = client.index(index_name).add_documents(
+res = mq.index(index_name).add_documents(
     documents,
     client_batch_size=1,
     tensor_fields=["image"]
@@ -69,7 +69,7 @@ pprint(res)
 query = "A rider on a horse jumping over the barrier"
 
 # Perform a search for this query
-search_results = client.index(index_name).search(query)
+search_results = mq.index(index_name).search(query)
 
 # Obtain the top result 
 top_result = search_results['hits'][0]
