@@ -10,7 +10,7 @@
 #####################################################
 
 from marqtune import Client
-from marqtune.enums import DatasetType, ModelType, InstanceType
+from marqtune.enums import DatasetType, InstanceType
 
 # Define Marqo Cloud API Key. For information visit: https://marqo.ai/blog/finding-my-marqo-api-key
 api_key = "your_api_key"
@@ -48,7 +48,7 @@ dataset = marqtune_client.create_dataset(
 
 # Define base model and checkpoints to perform fine-tuning on
 base_model = "ViT-B-32"
-base_checkpoint = "laion400m_e31"
+base_checkpoint = "laion2b_s34b_b79k"
 
 # Define training task parameters 
 train_task_params = {
@@ -72,10 +72,9 @@ tuned_model = marqtune_client.train_model(
     dataset.dataset_id,
     model_name,
     base_model,
-    base_checkpoint,
-    ModelType.OPEN_CLIP,
     instance_type=InstanceType.BASIC,
-    hyperparameters=train_task_params
+    hyperparameters=train_task_params,
+    wait_for_completion=True,
 )
 
 # Download the model in '.pt' format 
