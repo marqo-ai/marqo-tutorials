@@ -4,3 +4,6 @@ starter-guides/rag/models/*.DS_Store
 
 # DS Store
 .DS_Store
+
+# Virtual environment
+venv
